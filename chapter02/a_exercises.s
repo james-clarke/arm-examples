@@ -29,15 +29,15 @@ _main:
 
   MOV   X1,   #0x0000000000000002
   MOV   X2,   #0xFFFFFFFFFFFFFFFF 
-  MOV   W3,   #0xFFFFFFFF
+  MOV   X3,   #0xFFFFFFFF
  
   MOV   X4,   #0x0000000000000003
   MOV   X5,   #0xFFFFFFFFFFFFFFFF 
-  MOV   W6,   #0xFFFFFFFF
+  MOV   X6,   #0xFFFFFFFF
 
 
   // start with add carry the 32-bit regs
-  ADDS  W7,   W3,   W6
+  ADDS  X7,   X3,   X6
   // add 64-bit middle numbers next, making sure to look at carry flag
   ADCS  X8,   X2,   X3
   // add final 64-bit numbers
